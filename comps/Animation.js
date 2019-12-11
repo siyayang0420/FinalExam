@@ -44,13 +44,7 @@ function Animation(){
                 onPress={()=>{setText("New Text")}}
                 title="button"
             />
-<<<<<<< HEAD
-                     
-        </Animated.View>
-        
-=======
         </View>
->>>>>>> master
     );
 }
 
