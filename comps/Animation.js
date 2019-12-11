@@ -41,6 +41,7 @@ function Animation(){
             />
                      
         </Animated.View>
+        
     );
 }
 
