@@ -4,6 +4,7 @@ import Animation_Ang from './Animation_Ang';
 import Animation_N from './Animation_N';
 import Animation_S from './Animation_S'
 
+
 function Main(){
     return(
         <View>
