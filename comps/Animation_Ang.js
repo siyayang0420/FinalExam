@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, Animated, Button} from 'react-native';
 
-export default function Animation() {
+export default function Animation_Ang() {
         // const [op_value] = useState(new Animated.Value(1)); 
         const [bg_color] = useState(new Animated.Value(1));  
         

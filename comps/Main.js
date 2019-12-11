@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import Animation from './Animation';
+import Animation_Ang from './Animation_Ang';
 
 function Main(){
     return(
         <View>
-            <Animation/>
+            <Animation_Ang/>
         </View>
     )
 }
