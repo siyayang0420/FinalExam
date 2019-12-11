@@ -1,3 +1,5 @@
+
+
 import React, {useState, useEffect} from 'react';
 import {View, Text, Animated, Button} from 'react-native';
 
@@ -49,3 +51,4 @@ function Animation(){
 }
 
 export default Animation;
+
