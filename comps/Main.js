@@ -5,7 +5,10 @@ import Animation from './Animation';
 function Main(){
     return(
         <View>
-            <Animation/>
+
+            <Animation />
+            
+
         </View>
     )
 }

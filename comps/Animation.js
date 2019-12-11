@@ -1,28 +1,54 @@
-import React, {useState} from 'react';
+
+
+import React, {useState, useEffect} from 'react';
 import {View, Text, Animated, Button} from 'react-native';
 
-export default function Animation() {
-        // const [op_value] = useState(new Animated.Value(1)); 
-        const [bg_color] = useState(new Animated.Value(1));  
-        
-        var my_bg = bg_color.interpolate({
-            inputRange: [0,1],
-            outputRange: ["blue", "red"]
-        })
 
-        return (
-            <Animated.View style={{backgroundColor:my_bg}}>
-                <Text>This view is gonna get animated!</Text>
-                <Button onPress={()=>{
-                    Animated.timing(
-                        bg_color,
-                        {
-                            toValue:0,
-                            duration:500
-                            // delay:1000
-                        }
-                    ).start();
-                }} title="Go Invisible!" />
-            </Animated.View>
-        )
-    }
+
+function Animation(){
+
+    const [op] = useState(new Animated.Value(0));
+    const [text, setText] = useState("Original Text");
+    //run when the text change
+    useEffect(()=>{
+        Animated.timing(
+            op,
+            {
+            toValue:0,
+            duration:500
+            }
+        ).start();
+    }, [text]);
+//run when the component loads
+    useEffect(()=>{
+       Animated.timing(
+           op,
+           {
+            toValue:1,
+            duration:500
+           }
+       ).start();
+        }, []);
+
+
+
+    return(
+        <View>
+        <Animated.View style={{opacity:op}}>
+            <Text style={{justifyContent:"center", alignItems:"center", paddingTop:70}}>
+                Opacity is 1 when it loads
+            </Text>
+            <Text>{text}</Text>
+            
+                     
+        </Animated.View>
+        <Button
+                onPress={()=>{setText("New Text")}}
+                title="button"
+            />
+        </View>
+    );
+}
+
+export default Animation;
+
